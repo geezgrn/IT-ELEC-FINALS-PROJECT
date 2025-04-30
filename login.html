@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Consultant Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background: url(pic1.jpg);
+            background-size: cover;
+            background-position: center;
+
+          
+        }
+        .login-container {
+            background: white;
+            padding: 50px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            border-radius: 5px;
+            width: 500px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 80%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Health Consultant Login</h2>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        
+      
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (email === "user@gmail.com" && password === "admin123") {
+    
+            window.location.href = "file:///C:/Users/LAB2/Documents/final%20project%20IT%20ELEC/homepage.html"
+        } else {
+            alert("Invalid email or password. Please try again.");
+        }
+    });
+</script>
+
+</body>
+</html>
