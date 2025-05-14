@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background: url(pic5.webp);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 360px;
+}
+
+form {
+  max-width: 600px;
+  margin-top: 300px;
+  margin-left: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+label {
+  display: block;   
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 15px;
+  margin-left: 230px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+</style>
+
+    </head>
+
+
+<form id="reservation-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+  
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" required>
+  
+    <label for="doctor">Select Doctor:</label>
+    <select id="doctor">
+      <option>Dr. Ranish</option>
+      <option>Dr. Irlandez</option>
+      <option>Dr. Dolosa</option>
+      <option>Dr. Dela Cruz</option>
+
+    </select>
+  
+    <button type="submit">Reserve Appointment</button>
+  </form>
+  <script>
+  document.getElementById("reservation-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Your appointment has been booked!");
+  });
+  
+  </script>
